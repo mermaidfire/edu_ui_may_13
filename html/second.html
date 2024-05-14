@@ -194,8 +194,66 @@
                 context2.fillText("Gradient Text",10,60);
             </script>
 
-                
-         
+//from example in presentation
+<script>
+    //check brower support 
+    if (typeof(Storage) !="undefined") {
+        //store
+    localStorage.setItem("firstName", fname);
+    localStorage.setItem("lastName", lname);
+    localStorage.setItem("address", address);
+    localStorage.setItem("email", email);
+    localStorage.setItem("dob", dob);
+        //retrieve
+    document.getElementById("data").innerHTML = localStorage.getItem("firstName");
+    document.getElementById("data").innerHTML = localStorage.getItem("lastName");
+    document.getElementById("data").innerHTML = localStorage.getItem("address");
+    document.getElementById("data").innerHTML = localStorage.getItem("email");
+    document.getElementById("data").innerHTML = localStorage.getItem("dob")
+    ;} 
+    else {
+        document.getElementById("data").innerHTML = "Sorry, your browser does not support web storage...";
+    }            
+</script>
+
+//TO USE CACHE
+<html manifest="mypage.appcache">
+
+//webworker letting .js script run in background so page can load faster
+
+<p>Count numbers: <output id ="result"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+
+<p><strong>Note:</strong> Internet Explorer 10 and earlier do not support Web Workers.</p>
+<script>
+    var worker;
+    function startWorker() {    
+        worker = new Worker("demo_workers.js");
+        worker.onmessage = function(event) {    
+            document.getElementById("result").innerHTML = event.data;
+        };
+    function stopWorker() { 
+        worker.terminate();
+        worker = undefined;
+    }
+</script>
+
+//just count javascript simple_worker.js script
+<script id="demo_workers.js">
+    var i=0;
+
+    function justCount() {  
+        i = i + 1;
+        postMessage(i);
+        setTimeout("justCount()",500);
+    }   
+
+    justCount();
+    </script>
+
+    
+
             <p>
                 'googleAPIKey' => "AIzaSyCqcdvhagbvTBWQJUx9-KkRl_0rRlcCt2w",
             </p>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Server SEnt Events</title>
+    </head>
+
+    <body>
+        <button id="start" onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="clearText()">Clear</button>
+        <textarea id=""messageArea" readonly="readonly" rows="10" cols="50"></textarea><br/>
+        <script>
+
+            var eventSource = null;
+
+            function start() {
+                eventSource = new EventSource("http://localhost:8080/ServerSentEvents/AServlet");
+                eventSource.onopen = function(event) {
+                    var messageArea = document.getElementById("messageArea");
+                    messageArea.value += "Connection opened\n";
+                };
+                eventSource.onmessage = function(event) {
+                    var messageArea = document.getElementById("messageArea");
+                    messageArea.value += event.data + "\n";
+                };
+                eventSource.onerror = function(event) {
+                    var messageArea = document.getElementById("messageArea");
+                    if (event.eventPhase == EventSource.CLOSED) {
+                        messageArea.value += "Connection closed\n";
+                    } else {
+                        messageArea.value += "Error occurred\n";
+                    }
+                };
+
+            function stop() {
+                eventSource.close();
+            }
+
+            function clearText() {
+                var messageArea = document.getElementById("messageArea");
+                messageArea.value = "";
+            }
+        </script>
+    </body>
+
+</html>

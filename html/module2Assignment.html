@@ -83,7 +83,8 @@
             } else {
                 alert("Please fill all the fields");
             }
-            }
+            
+
 
             function retrieveData() {
             var fname = localStorage.getItem("firstName");
@@ -104,8 +105,29 @@
             }
             }
             </script>
+            
+
+            //from example in presentation
+            <script>
+                //check brower support 
+                if (typeof(Storage) !="undefined") {
+                    //store
+                localStorage.setItem("firstName", fname);
+                localStorage.setItem("lastName", lname);
+                localStorage.setItem("address", address);
+                localStorage.setItem("email", email);
+                localStorage.setItem("dob", dob);
+                    //retrieve
+                document.getElementById("data").innerHTML = localStorage.getItem("firstName");
+                document.getElementById("data").innerHTML = localStorage.getItem("lastName");
+                document.getElementById("data").innerHTML = localStorage.getItem("address");
+                document.getElementById("data").innerHTML = localStorage.getItem("email");
+                document.getElementById("data").innerHTML = localStorage.getItem("dob")
+                ;} 
+                else {
+                    document.getElementById("data").innerHTML = "Sorry, your browser does not support web storage...";
+                }            
+            </script>
 
     </body>
 </html>
-
-        
