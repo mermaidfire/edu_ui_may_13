@@ -4,28 +4,136 @@
     <title>Developer Funnel</title>
     </head>
     <body>
+
+        <video id="my-video" class=""video" autoplay muted loop>
+            <source src="https://www.youtube.com/watch?v=3ugXM3ZDUuE" type="video/mp4">
+            <source src="https://youtu.be/3ugXM3ZDUuE?si=nXsJXBjXIMv4uOK_" type="video/webm">
+            </video>
+
+            <script>
+            (function() {
+                /**
+                 * Video element
+                 * @type{HTMLElement}
+                 **/
+                var video = document.getElementById('my-video');
+
+                /**
+                 * Check if video can play and play it
+                **/
+                video.addEventListener('canplay', function() {
+                video.play();
+                });
+            })();
+            </script>
+
+
             <center>
-            <h1>Developer Funnel</h1>
+            <h1>Module 2 Assignment</h1>
             </center>
-            <h2>My code data</h2>
+            <h2>Student: Tina O'Connell</h2>
+
             
+            <p>GeoLocation</p>
+            < id="demo">Click the button to get your coordinates:</p>
+            <button onclick="getLocation()">Try It</button>
+            <div id="mapholder"></div>
+            <script>
+                var x = document.getElementById("demo");
+                function getLocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition);
+                    } else {
+                        x.innerHTML = "Geolocation is not supported by this browser.";
+                    }
+                }
+                function success(position) {
+                    var lat = position.coords.latitude;
+                    var long = position.coords.longitude;
+                    x.innerHTML = 'Latitude is ' + lat + '° <br>Longitude is ' + long + '°';
+                }
+                function showPosition(position) {
+                    x.innerHTML = "Latitude: " + position.coords.latitude + 
+                    "<br>Longitude: " + position.coords.longitude;
+                }                                
+
+            </script>
+
+            <script>
+                function allowDrop(ev) {
+                    ev.preventDefault();}
+                function drag(ev) {
+                    ev.dataTransfer.setData("text", ev.target.id);}
+                function drop(ev) {
+                    ev.preventDefault();
+                    var data = ev.dataTransfer.getData("text/html");
+                    ev.target.appendChild(document.getElementById(data));
+
+                }
+            </script>
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" border="1px" width="120" height="120"></div>  
+            <img id="drag1" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ftina-o-connell-49a0821a&psig=AOvVaw3hSG09taE-F5-ZUrmWWkYN&ust=1715739800649000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNCymv2KjIYDFQAAAAAdAAAAABAE" draggable="true" ondragstart="drag(event)" width="336" height="69"></img>  
+
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            </p>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            <span style="background-color: teal;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            </span>
+            <span>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            </span>
+            <h1>User Information</h1>
+            <form action=" " method="get">
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="address">address:</label><br>
+                <input type="text" id="address" name="address"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="date_of_birth">Date of Birth:</label><br>
+                <input type="date" id="date_of_birth" name="date_of_birth"><br>
+                <input type="submit" value="Submit">
+            </form>
+
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg" controls autoplay>
+                Your browser does not support the audio element.
+              </audio>
+
+              <video width="320" height="240" controls autoplay>
+                <source src="video.mp4" type="video/mp4">
+            
+              </video>
+
+            <a href="https://oconnellenterprises.com/">Web: https://OConnellEnterprises.com</a></h3></br>
+            <h4><a href="mailto:tina@oconnellenterprises.com">Email: Tina@OConnellEnterprises.com</a></h4></br>
+            <h5>Address: 6505 Kenwood Road<br>
+            Fort Pierce, FL 34951</h5>
+
             <figure>
                 <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ftina-o-connell-49a0821a&psig=AOvVaw3hSG09taE-F5-ZUrmWWkYN&ust=1715739800649000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNCymv2KjIYDFQAAAAAdAAAAABAE" alt="Tina O'Connell" style="width:100%">
                 <figcaption>Tina O'Connell, 2024</figcaption>
             </figure>
 
-            <h2>3 Hyperlinks</h2>
-            <a href="http://yahoo.com">Yahoo.com</a>
-            <a href="http://google.com">Google.com</a>
-            <a href="http://cnn.com">CNN.com</a>
+            <h2>Examples of my work Hyperlinks</h2>
+            <a href="http://Flagshipbio.com">flagshipbio.com</a><br>
+            <a href="http://bandiflorida.com">BandiFlorida.com</a><br>
+            <a href="http://fpua.net">fpua.net</a>
 
-            <h2>Company Information</h2>
+            <h1>User Information</h1>
                 <h3>OConnell Enterprises.</h3>
                 <h3><a href="https://oconnellenterprises.com/">Web: https://OConnellEnterprises.com</a></h3></br>
                 <h4><a href="mailto:tina@oconnellenterprises.com">Email: Tina@OConnellEnterprises.com</a></h4></br>
                 <h5>Address: 6505 Kenwood Road<br>
                 Fort Pierce, FL 34951</h5>
-            <br>
 
             <h2>Employee Information</h2>
             <table>
@@ -48,32 +156,42 @@
                     <td>ITS</td>
                     <td>Developer</td>
                 </tr>
-            </table>
+            </table>          
 
-            <h2>List of Countries</h2>
-            <datalist id="Countries"> 
-                    <option value="United States">
-                    <option value="Canada">
-                    <option value="Mexico">
-                    <option value="United Kingdom">
-                    <option value="Germany">
-            </datalist>
-
-            <iframe src="https://www.edureka.co/" width="100%" height="500"></iframe>
+            <iframe src="https://www.oconnellenterprises.com" width="50%" height="200"></iframe>
 
             <form action="demo_form.asp" method="get" oninput="output.value=parseInt(first.value)*parseInt(second.value)">
                 Today's Date: <input type="date" name="today"><br>
-                First Number: <input type="number" id="first" name="first" value="50">*<br>
-                Second Number: <input type="number" id="second" name="second" value="50">=<br>
+                First Number: <input type="number" id="first" name="first" value=" ">*<br>
+                Second Number: <input type="number" id="second" name="second" value=" ">=<br>
                 <output name="output" for="first second"></output>
-            </form>>
+            </form>
 
-            <canvas id="Canvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+            <canvas id="Canvas" width="150" height="100" style="border:1px solid #000000;">
+            </canvas>
+            <canvas id="Canvas2" width="150" height="100" style="border:1px solid #000000;">
+            </canvas>
             <script>
                 var Canvas1 = document.getElementById("Canvas");
-                var context = Canvas1.getContext("2d");
-                context.fillStyle = "#000dd0";
-                context.fillRect(0,0,150,75);
+                var context1 = Canvas1.getContext("2d");
+                context1.fillStyle = "#000dd0";
+                context1.fillRect(0,0,150,100);
+
+             
+                var Canvas2 = document.getElementById("Canvas2");
+                var context2 = Canvas2.getContext("2d");
+                context2.font="35px Arial";
+                //Create gradient
+                var gra=context2.createLinearGradient(0,0,Canvas2.width,Canvas2.height);
+                gra.addColorStop(0,"red");
+                gra.addColorStop(0.2,"blue");
+                gra.addColorStop(0.4,"green");
+                gra.addColorStop(0.6,"yellow");
+                gra.addColorStop(0.8,"orange");
+                gra.addColorStop(1.0,"Cyan");
+                //Fill with gradient
+                context2.fillStyle = gra;
+                context2.fillText("Gradient Text",10,60);
             </script>
 
                 
