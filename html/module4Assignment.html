@@ -66,17 +66,98 @@
     <p id="p2">This is the second paragraph with a dotted border.</p>
     <p id="p3">This is the third paragraph with a dashed border.</p>
 
-
-    //Module 4 notes
-    //Text Shadow: (gives shadow to text) - horizontal shadow, vertical sadow and blur radious of color and color are the 4 parameters in example below 
-    <h1>Text Shadow Example - for notes</h1>
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Effects Example</title>
     <style>
-        h1 {
-            text-shadow: 2px 2px 5px red;
+        /* Text shadow effect */
+        .text-shadow {
+            text-shadow: 1px 1px 5px red;
+            font-size: 24px;
+            margin: 20px;
+        }
+
+        /* Custom font */
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('path-to-your-font-file.woff') format('woff');
+            /* You can add more formats if needed */
+        }
+        .custom-font {
+            font-family: 'MyCustomFont', sans-serif;
+            font-size: 24px;
+            margin: 20px;
+        }
+
+        /* 2D transformations */
+        .rotate-30 {
+            transform: rotate(30deg);
+        }
+        .rotate-60 {
+            transform: rotate(60deg);
+        }
+
+        /* 3D transformation */
+        .rotate-3d {
+            transform: rotateY(30deg);
+            margin: 20px;
+        }
+        .rotate-3d-180 {
+            transform: rotateY(180deg);
+            margin: 20px;
+        }
+
+        /* Multiple column display */
+        .multi-column {
+            column-count: 4;
+            column-width: 40px;
+            margin: 20px;
         }
     </style>
+</head>
+<body>
 
+    <!-- Text Shadow Effect -->
+    <p class="text-shadow">This text has a shadow effect.</p>
+
+    <!-- Custom Font -->
+    <div class="custom-font">
+        <p>Your Name</p>
+        <p>About you: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+    </div>
+
+    <!-- 2D Transformations -->
+    <h2>2D Transformations</h2>
+    <img src="image1.jpg" class="rotate-30" alt="Image 1">
+    <img src="image2.jpg" class="rotate-60" alt="Image 2">
+    <img src="image3.jpg" class="rotate-30" alt="Image 3">
+    <img src="image4.jpg" class="rotate-30" alt="Image 4">
+    <img src="image5.jpg" class="rotate-60" alt="Image 5">
+
+    <!-- 3D Transformation -->
+    <h2>3D Transformation</h2>
+    <img src="image6.jpg" class="rotate-3d" alt="Image 6">
+    <img src="image7.jpg" class="rotate-3d-180" alt="Image 7">
+
+    <!-- Multiple Column Display -->
+    <h2>Multiple Column Display</h2>
+    <div class="multi-column">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    </div>
+
+
+
+    
+
+    //Module 4 notes
+    //Text Shadow: (gives shadow to text) - horizontal shadow, vertical shadow and blur radious of color and color are the 4 parameters in example below 
+    <h1 style="text-shadow: 2px 2px 5px red;">Text Shadow Example - for notes</h1>
+   
 
 
 </body>
 </html>
+
