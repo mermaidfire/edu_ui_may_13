@@ -1,77 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tina O'Connell - Module 4 Assignement</title>
-    <style>
-        body {
-            background-color: fuchsia;
-            font-size: 20px;
-            color: navy;
-        }
-        table {
-            width: 50%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 2px solid green;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: darkgray;
-        }
-        img {
-            position: absolute;
-            left: 300px;
-            top: 100px;
-        }
-        #p1 {
-            border: 2px solid navy;
-        }
-        #p2 {
-            border: 2px dotted navy;
-        }
-        #p3 {
-            border: 2px dashed navy;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Module 4 Assignment Homework - Tina Lynn O'Connell</h1>
-    <p id="pA">This is a sample paragraph.</p>
-
-    <h2>Insurance Company Policy Table</h2>
-    <table id="ins">
-        <tr id="headrow">
-            <th>Policy ID</th>
-            <th>Policy Holder's Name</th>
-            <th>Insured Amount</th>
-        </tr>
-        <tr>
-            <td>104566654</td>
-            <td>John Doe</td>
-            <td>$100,000</td>
-        </tr>
-        <tr>
-            <td>245648444</td>
-            <td>Tina O'Connell</td>
-            <td>$200,000</td>
-        </tr>
-    </table>          
-
-    <img src="http://oconnellenterprises.com/wp-content/uploads/2024/03/16807418_698189800340394_2419154526022661590_n.jpg" width="50%" height="200">
-
-    <p id="p1">This is the first paragraph with a solid border.</p>
-    <p id="p2">This is the second paragraph with a dotted border.</p>
-    <p id="p3">This is the third paragraph with a dashed border.</p>
-
-html
-Copy code
-<!DOCTYPE html>
-<html>
-<head>
-    <title>HTML Effects Example</title>
+    <title>Module 4 Assignment - Tina Lynn O'Connell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Danfo&display=swap" rel="stylesheet">
     <style>
         /* Text shadow effect */
         .text-shadow {
@@ -80,17 +13,7 @@ Copy code
             margin: 20px;
         }
 
-        /* Custom font */
-        @font-face {
-            font-family: 'MyCustomFont';
-            src: url('path-to-your-font-file.woff') format('woff');
-            /* You can add more formats if needed */
-        }
-        .custom-font {
-            font-family: 'MyCustomFont', sans-serif;
-            font-size: 24px;
-            margin: 20px;
-        }
+
 
         /* 2D transformations */
         .rotate-30 {
@@ -116,7 +39,19 @@ Copy code
             column-width: 40px;
             margin: 20px;
         }
+            
+        .danfo-custom-font {
+            font-family: "Danfo", serif;
+            font-size: 24px;
+            margin: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "ELSH" 0;
+            }     
     </style>
+
 </head>
 <body>
 
@@ -124,36 +59,33 @@ Copy code
     <p class="text-shadow">This text has a shadow effect.</p>
 
     <!-- Custom Font -->
-    <div class="custom-font">
-        <p>Your Name</p>
-        <p>About you: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+    <div class="danfo-custom-font">
+        <p>Tina O'Connell</p>
+        <p>About you: I am a 38 a year database developer with php experience and some web dev with wordpress and such.</p>
     </div>
 
     <!-- 2D Transformations -->
     <h2>2D Transformations</h2>
-    <img src="image1.jpg" class="rotate-30" alt="Image 1">
-    <img src="image2.jpg" class="rotate-60" alt="Image 2">
-    <img src="image3.jpg" class="rotate-30" alt="Image 3">
-    <img src="image4.jpg" class="rotate-30" alt="Image 4">
-    <img src="image5.jpg" class="rotate-60" alt="Image 5">
+    <img src="https://travel.usnews.com/dims4/USNEWS/0f10ebb/2147483647/resize/445x280%5E%3E/crop/445x280/quality/85/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FNew_Paris_pic_z3GdX0a.jpg" class="rotate-30" alt="Image 1">
+    <img src="https://travel.usnews.com/dims4/USNEWS/e66153b/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FNotre_Dame_Cathedral_Eric_Schaeffer_Getty.jpg" class="rotate-60" alt="Image 2">
+    <img src="https://travel.usnews.com/dims4/USNEWS/f75c76a/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FArc_de_Triomphe_Alexander_Spatari_Getty.jpg" class="rotate-30" alt="Image 3">
+    <img src="https://travel.usnews.com/dims4/USNEWS/1e6cfe0/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FSacre_couer_westend61_Getty.jpg" class="rotate-30" alt="Image 4">
+    <img src="https://travel.usnews.com/dims4/USNEWS/a16c31e/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FSeine_and_bridge_Matteo_Colombo_Gett.jpg" class="rotate-60" alt="Image 5">
 
     <!-- 3D Transformation -->
     <h2>3D Transformation</h2>
-    <img src="image6.jpg" class="rotate-3d" alt="Image 6">
-    <img src="image7.jpg" class="rotate-3d-180" alt="Image 7">
+    <img src="https://travel.usnews.com/dims4/USNEWS/bcb0db9/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FJardin_Tulieres_Leonid_Andronov_Getty.jpg" class="rotate-3d" alt="Image 6">
+    <img src="https://travel.usnews.com/dims4/USNEWS/37807bc/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FGettyImages-562738023.jpg" class="rotate-3d-180" alt="Image 7">
 
     <!-- Multiple Column Display -->
     <h2>Multiple Column Display</h2>
     <div class="multi-column">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
     </div>
-
-
-
-    
+  
 
     //Module 4 notes
-    //Text Shadow: (gives shadow to text) - horizontal shadow, vertical shadow and blur radious of color and color are the 4 parameters in example below 
+    //Text Shadow: (gives shadow to text) - horizontal shadow, vertical shadow, and blur radius of color, and color -- are the 4 parameters in example below 
     <h1 style="text-shadow: 2px 2px 5px red;">Text Shadow Example - for notes</h1>
    
 
