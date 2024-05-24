@@ -1,104 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Module 4 Assignment - Tina Lynn O'Connell</title>
+    <title>Final Exam Assignment - Tina Lynn O'Connell</title>
+    <link rel="stylesheet" type="text/css" href="final.css" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Danfo&display=swap" rel="stylesheet">
-    <style>
-        /* Text shadow effect */
-        .text-shadow {
-            text-shadow: 1px 1px 5px red;
-            font-size: 24px;
-            margin: 20px;
-        }
-
-            /* 2D transformations */
-            .rotate-30 {
-            width: 445px;
-            height: 280px;
-            display: inline-block;
-            margin: 10px;
-            animation: rock-30 4s infinite;
-        }
-        .rotate-60 {
-            width: 445px;
-            height: 280px;
-            display: inline-block;
-            margin: 10px;
-            animation: rock-60 4s infinite;
-        }
-
-        @keyframes rock-30 {
-            0% { transform: rotate(30deg); }
-            50% { transform: rotate(-30deg); }
-            100% { transform: rotate(30deg); }
-        }
-
-        @keyframes rock-60 {
-            0% { transform: rotate(60deg); }
-            50% { transform: rotate(-60deg); }
-            100% { transform: rotate(60deg); }
-        }
-
-        /* 3D transformation */
-        .rotate-3d {
-            width: 445px;
-            height: 280px;
-            transform: rotateY(30deg);
-            margin: 20px;
-            animation: spin 4s infinite linear;
-        }
-        .rotate-3d-180 {
-            width: 445px;
-            height: 280px;
-            transform: rotateY(180deg);
-            margin: 20px;
-            animation: spin 4s infinite linear;
-        }
-
-        @keyframes spin {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(360deg); }
-        }
-        
-        /* Multiple column display */
-        .multi-column {
-            column-count: 4;
-            column-width: 40px;
-            margin: 20px;
-        }
-
-        .danfo-custom-font {
-            font-family: "Danfo", serif;
-            font-size: 24px;
-            margin: 20px;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            font-variation-settings: "ELSH" 0;
-        }
-        @font-face {
-            font-family: "Danfo", serif;
-            src: url("https://fonts.gstatic.com/s/danfo/v1/xfu30Wr0Wn3NOQM2Q2x9Yw.woff2") format("woff2");
-        }
-        div.font_file, h1.font_file {
-            font-family: "Danfo", serif;
-            color: #9400D3;
-        }
-        div.regular{
-            font-weight: normal;
-            font-size: 20px;
-            font-family: "Danfo", serif;
-        }
-    </style>
 </head>
 <body>
-    <header style="text-align: center;">    
-        <h1>Module 4 Assignment - By: Tina Lynn O'Connell</h1>
+    <header class="top-bar">    
+        <h1 class="titletext">Developer Funnel - By: Tina Lynn O'Connell</h1>
+        <div class="socialicons">
+            <a href="https://facebook.com/tinaoconnell11"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="socialicons" alt="Facebook"></a>
+            <a href="https://facebook.com/tinaoconnell11"></a><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="socialicons" alt="Instagram"></a>
+            <a href="https://facebook.com/tinaoconnell11"></a><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" class="socialicons" alt="YouTube"></a>
+            <a href="https://facebook.com/tinaoconnell11"></a><img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" class="socialicons" alt="Twitter"></a>
     </header>
-    <hr/>
-
+   
+    <div class="hero-banner">
+        <h1>Developer Funnel</h1>
+        <p>Web Development and Design</p>
+    </div>
     <!-- Text Shadow Effect -->
     <p class="text-shadow">About Cities - this has shadow effect added</p>
 

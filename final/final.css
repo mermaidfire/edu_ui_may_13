@@ -1,0 +1,127 @@
+
+/* title header text */
+.titletext {
+    font-size: 24px;
+    font-family: 'Arial', 'sans-serif';
+    color: white;
+    text-align: left;
+    margin: 0px;
+    padding-right: 870px;
+
+}
+/*top bar*/
+.top-bar {
+    display:flex;
+    background-color: #3e2634;
+    color: white;
+    padding: 20px;
+}
+/*social icons*/
+.socialicons {
+    display:flex;
+    float: inline-end;
+    
+    gap: 5px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+/* Hero Banner */
+.hero-banner {
+    background-image: url('https://travel.usnews.com/dims4/USNEWS/f75c76a/2147483647/resize/976x652%5E%3E/crop/976x652/quality/85/?url=https%3A%2F%2Ftravel.usnews.com%2Fimages%2FArc_de_Triomphe_Alexander_Spatari_Getty.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-family: 'Arial', 'sans-serif';
+    text-align: center;
+}
+/* Text shadow effect */
+.text-shadow {
+    text-shadow: 1px 1px 5px red;
+    font-size: 24px;
+    margin: 20px;
+}
+
+/* 2D transformations */
+    .rotate-30 {
+    width: 445px;
+    height: 280px;
+    display: inline-block;
+    margin: 10px;
+    animation: rock-30 4s infinite;
+}
+.rotate-60 {
+    width: 445px;
+    height: 280px;
+    display: inline-block;
+    margin: 10px;
+    animation: rock-60 4s infinite;
+}
+
+@keyframes rock-30 {
+    0% { transform: rotate(30deg); }
+    50% { transform: rotate(-30deg); }
+    100% { transform: rotate(30deg); }
+}
+
+@keyframes rock-60 {
+    0% { transform: rotate(60deg); }
+    50% { transform: rotate(-60deg); }
+    100% { transform: rotate(60deg); }
+}
+
+/* 3D transformation */
+.rotate-3d {
+    width: 445px;
+    height: 280px;
+    transform: rotateY(30deg);
+    margin: 20px;
+    animation: spin 4s infinite linear;
+}
+.rotate-3d-180 {
+    width: 445px;
+    height: 280px;
+    transform: rotateY(180deg);
+    margin: 20px;
+    animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* Multiple column display */
+.multi-column {
+    column-count: 4;
+    column-width: 40px;
+    margin: 20px;
+}
+
+.danfo-custom-font {
+    font-family: "Danfo", serif;
+    font-size: 24px;
+    margin: 20px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "ELSH" 0;
+}
+@font-face {
+    font-family: "Danfo", serif;
+    src: url("https://fonts.gstatic.com/s/danfo/v1/xfu30Wr0Wn3NOQM2Q2x9Yw.woff2") format("woff2");
+}
+div.font_file, h1.font_file {
+    font-family: "Danfo", serif;
+    color: #9400D3;
+}
+div.regular{
+    font-weight: normal;
+    font-size: 20px;
+    font-family: "Danfo", serif;
+}
