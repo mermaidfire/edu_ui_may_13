@@ -1,0 +1,14 @@
+#How to extract audio from video file using python
+
+#pip install moviepy
+import moviepy.editor 
+
+# read the video file 
+video = moviepy.editor.VideoFileClip('video_name.mp4')
+
+#convert video data to audio data
+audio = video.audio
+
+#save audio file 
+audio.write_audiofile('audio_name.mp3')
+

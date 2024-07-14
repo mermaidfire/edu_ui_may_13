@@ -1,0 +1,62 @@
+        /* Text shadow effect */
+        .text-shadow {
+            text-shadow: 1px 1px 5px red;
+            font-size: 24px;
+            margin: 20px;
+        }
+
+            /* 2D transformations */
+            .rotate-30 {
+            width: 445px;
+            height: 280px;
+            display: inline-block;
+            margin: 10px;
+            animation: rock-30 4s infinite;
+        }
+        .rotate-60 {
+            width: 445px;
+            height: 280px;
+            display: inline-block;
+            margin: 10px;
+            animation: rock-60 4s infinite;
+        }
+
+        @keyframes rock-30 {
+            0% { transform: rotate(30deg); }
+            50% { transform: rotate(-30deg); }
+            100% { transform: rotate(30deg); }
+        }
+
+        @keyframes rock-60 {
+            0% { transform: rotate(60deg); }
+            50% { transform: rotate(-60deg); }
+            100% { transform: rotate(60deg); }
+        }
+
+        /* 3D transformation */
+        .rotate-3d {
+            width: 445px;
+            height: 280px;
+            transform: rotateY(30deg);
+            margin: 20px;
+            animation: spin 4s infinite linear;
+        }
+        .rotate-3d-180 {
+            width: 445px;
+            height: 280px;
+            transform: rotateY(180deg);
+            margin: 20px;
+            animation: spin 4s infinite linear;
+        }
+
+        @keyframes spin {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        
+        /* Multiple column display */
+        .multi-column {
+            column-count: 4;
+            column-width: 40px;
+            margin: 20px;
+        }
