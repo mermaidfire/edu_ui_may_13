@@ -1,3 +1,139 @@
+        
+        body{
+            margin: auto;
+            
+        }
+
+        /* Header Section */
+
+        header{
+            height: 60px; 
+            /*border: 5px solid green;*/
+            background-color: #3c2632;
+
+        }
+
+        #brand{
+            float: left;
+            font-size: 30px;
+            color: white;
+            margin-left: 15px;
+            margin-top: 13px;
+
+        }
+
+        #social{
+            float: right;
+            margin-right 15px;
+            margin-top: 13px;  
+                
+        }
+
+        .slogo{
+            width: 38px;
+            margin-right: 4px;
+            margin-left: 4px;
+            margin-top: -6px;
+            margin-bottom: 6px;
+        }
+
+        /* Search CSS Section */
+
+        #search{
+            background-image: url('file:///C:/Users/tina/OneDrive/Documents/training/MAY_UI_EVENING_13/edu_ui_may_13/images/pngtree-tables-set-at-a-restaurant-image_13032060.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 450px;
+            margin-top:0%;
+        
+        }
+        #logo{
+            height: 150px;
+            width: 150px;
+            background-color: white;
+            border-radius: 50%;
+            margin-top: 2%;
+            margin-left: 50%;
+            position: absolute;
+            font-size: 96px;
+        }
+
+        #logo> span{
+            color: #3c2632;
+            margin-left: 18%;
+            margin-top: 15%;
+            position: absolute;  
+        }
+
+        #heading{
+            font-size: 60px;
+            margin-top: 18%;
+            margin-left: 31%;
+            position:absolute;
+            color:white;
+
+        }
+
+        .dropdown{
+            height: 60px;
+            width: 53%;
+            margin-top: 28%;
+            margin-left: 29%;
+            position: absolute;
+            
+        }
+
+        select{
+            height: 60px;
+            width: 40%;
+            text-align: center ;
+            font-size: 20px;
+        }
+
+        #restSelect{
+            width: 59%; 
+        }
+        
+
+         
+        /* quickcss */
+
+        #quickSearch{
+            background-color: bisque;      
+        }
+        
+        .quickHeading{
+            font-size: 30px;
+            display: block;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #3c2632;
+        }
+
+        .quickSubHeading{
+            font-size: 20px;
+            display: block;
+            color: grey;
+            line-height: 2;
+        }
+
+        .mainbox{
+            display: flex;
+            flex-wrap: wrap; 
+        }
+
+        .titleContainer
+        {
+            height: 180px;
+            width: 30%;
+            border:2px solid color:#3c2632;  
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: blue;
+            margin-left: 2%;
+            margin-top: 2%;
+        }
+
         /* Text shadow effect */
         .text-shadow {
             text-shadow: 1px 1px 5px red;
@@ -7,9 +143,9 @@
 
             /* 2D transformations */
             .rotate-30 {
-            width: 445px;
-            height: 280px;
-            display: inline-block;
+            width: 50px;
+            height: 50px;
+            display: flex;
             margin: 10px;
             animation: rock-30 4s infinite;
         }
